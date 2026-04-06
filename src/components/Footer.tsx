@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-heading text-2xl font-bold mb-4">
-              NOIR<span className="text-accent">.</span>
+              BTB<span className="text-accent">.</span>
             </h3>
             <p className="font-body text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
               A bold creative agency crafting unforgettable brand experiences
