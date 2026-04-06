@@ -41,7 +41,7 @@ const Footer = () => {
               Contact
             </h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/60">
-              <li>hello@noirstudio.com</li>
+              <li>hello@beyondthebillboard.com</li>
               <li>+1 (555) 000-1234</li>
             </ul>
           </div>
