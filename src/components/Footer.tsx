@@ -11,7 +11,7 @@ const Footer = () => {
               BTB<span className="text-accent">.</span>
             </h3>
             <p className="font-body text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
-              A bold creative agency crafting unforgettable brand experiences
+              Beyond The Billboard — a bold creative agency crafting unforgettable brand experiences
               for ambitious companies worldwide.
             </p>
           </div>
