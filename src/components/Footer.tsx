@@ -61,7 +61,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} NOIR Studio. All rights reserved.
+            © {new Date().getFullYear()} Beyond The Billboard. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             {[Instagram, Twitter, Linkedin, Dribbble].map((Icon, i) => (
