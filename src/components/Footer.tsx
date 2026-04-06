@@ -8,10 +8,10 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-heading text-2xl font-bold mb-4">
-              NOIR<span className="text-accent">.</span>
+              BTB<span className="text-accent">.</span>
             </h3>
             <p className="font-body text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
-              A bold creative agency crafting unforgettable brand experiences
+              Beyond The Billboard — a bold creative agency crafting unforgettable brand experiences
               for ambitious companies worldwide.
             </p>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
               Contact
             </h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/60">
-              <li>hello@noirstudio.com</li>
+              <li>hello@beyondthebillboard.com</li>
               <li>+1 (555) 000-1234</li>
             </ul>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} NOIR Studio. All rights reserved.
+            © {new Date().getFullYear()} Beyond The Billboard. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             {[Instagram, Twitter, Linkedin, Dribbble].map((Icon, i) => (
