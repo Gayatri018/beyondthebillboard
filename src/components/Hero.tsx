@@ -55,7 +55,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="text-sm font-body text-accent font-medium tracking-widest uppercase mb-6"
           >
-            Beyond The Billboard — Est. 2026
+            Beyond The Billboard, Est. 2026
           </motion.p>
 
           <motion.h1
