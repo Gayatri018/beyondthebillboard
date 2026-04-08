@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import showcase1 from "@/assets/showcase-1.jpg";
-import showcase2 from "@/assets/showcase-2.jpg";
+import heroIllustration from "@/assets/hero-brand-illustration.jpg";
+import brandingAsset from "@/assets/branding-strategic-asset.jpg";
 
 const Showcase = () => {
   return (
@@ -14,7 +14,7 @@ const Showcase = () => {
           className="mb-16"
         >
           <p className="text-sm font-body text-accent font-medium tracking-widest uppercase mb-4">
-            Creative Vision
+            Brand Narratives
           </p>
           <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl">
             Where art meets
@@ -32,11 +32,11 @@ const Showcase = () => {
             className="md:col-span-7 rounded-xl overflow-hidden"
           >
             <img
-              src={showcase1}
-              alt="Creative showcase poster"
+              src={brandingAsset}
+              alt="Branding is a Strategic Asset"
               loading="lazy"
               width={800}
-              height={1000}
+              height={400}
               className="w-full h-auto object-cover rounded-xl"
             />
           </motion.div>
@@ -50,11 +50,11 @@ const Showcase = () => {
               className="rounded-xl overflow-hidden"
             >
               <img
-                src={showcase2}
-                alt="Abstract creative composition"
+                src={heroIllustration}
+                alt="Brand building illustration"
                 loading="lazy"
                 width={800}
-                height={1000}
+                height={800}
                 className="w-full h-auto object-cover rounded-xl"
               />
             </motion.div>
@@ -72,9 +72,9 @@ const Showcase = () => {
                 Bolder execution.
               </h3>
               <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">
-                Every project starts with a question: how do we make this
-                unforgettable? We push boundaries, challenge norms, and deliver
-                work that demands attention.
+                Every brand starts with a question: How do we move beyond the noise?
+                I bridge the gap by decoding the "Why" behind the "What" to build
+                narratives that don't just demand attention, but command respect.
               </p>
             </motion.div>
           </div>

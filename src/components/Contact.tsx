@@ -4,19 +4,19 @@ import { Send, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 
 const serviceOptions = [
-  "UI/UX Design",
-  "Branding",
-  "Marketing",
-  "Motion Design",
-  "Photography",
-  "Frontend Development",
+  "Brand Strategy",
+  "Brand Identity",
+  "Digital Marketing & SEO",
+  "Content Writing",
+  "Content Curation",
+  "Market Research",
 ];
 
 const budgetOptions = [
-  "Under $5K",
-  "$5K – $15K",
-  "$15K – $50K",
-  "$50K+",
+  "Under ₹50K",
+  "₹50K – ₹2L",
+  "₹2L – ₹5L",
+  "₹5L+",
 ];
 
 const Contact = () => {
@@ -42,7 +42,6 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // TODO: Connect to backend (Lovable Cloud) for email sending
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setIsSubmitted(true);
       toast.success("Message sent! We'll be in touch soon.");
@@ -97,17 +96,17 @@ const Contact = () => {
               something great.
             </h2>
             <p className="text-body text-lg mb-8 max-w-md">
-              Have a project in mind? Drop us a line and let's explore how we
-              can bring your vision to life.
+              Have a brand story to tell? Drop us a line and let's explore how we
+              can build your narrative.
             </p>
             <div className="space-y-4">
               <p className="text-sm font-body text-muted-foreground">
                 <span className="text-foreground font-medium">Email:</span>{" "}
-                hello@noirstudio.com
+                hello@beyondthebillboard.com
               </p>
               <p className="text-sm font-body text-muted-foreground">
                 <span className="text-foreground font-medium">Phone:</span>{" "}
-                +1 (555) 000-1234
+                +91 98765 43210
               </p>
             </div>
           </motion.div>
@@ -121,86 +120,22 @@ const Contact = () => {
             className="space-y-5"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <input
-                name="name"
-                type="text"
-                placeholder="Your Name *"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className={inputClasses}
-              />
-              <input
-                name="email"
-                type="email"
-                placeholder="Email Address *"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className={inputClasses}
-              />
+              <input name="name" type="text" placeholder="Your Name *" required value={formData.name} onChange={handleChange} className={inputClasses} />
+              <input name="email" type="email" placeholder="Email Address *" required value={formData.email} onChange={handleChange} className={inputClasses} />
             </div>
-
-            <input
-              name="phone"
-              type="tel"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              className={inputClasses}
-            />
-
+            <input name="phone" type="tel" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className={inputClasses} />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <select
-                name="service"
-                required
-                value={formData.service}
-                onChange={handleChange}
-                className={inputClasses}
-              >
-                <option value="" disabled>
-                  Select Service *
-                </option>
-                {serviceOptions.map((s) => (
-                  <option key={s} value={s}>
-                    {s}
-                  </option>
-                ))}
+              <select name="service" required value={formData.service} onChange={handleChange} className={inputClasses}>
+                <option value="" disabled>Select Service *</option>
+                {serviceOptions.map((s) => (<option key={s} value={s}>{s}</option>))}
               </select>
-
-              <select
-                name="budget"
-                required
-                value={formData.budget}
-                onChange={handleChange}
-                className={inputClasses}
-              >
-                <option value="" disabled>
-                  Budget Range *
-                </option>
-                {budgetOptions.map((b) => (
-                  <option key={b} value={b}>
-                    {b}
-                  </option>
-                ))}
+              <select name="budget" required value={formData.budget} onChange={handleChange} className={inputClasses}>
+                <option value="" disabled>Budget Range *</option>
+                {budgetOptions.map((b) => (<option key={b} value={b}>{b}</option>))}
               </select>
             </div>
-
-            <textarea
-              name="message"
-              rows={5}
-              placeholder="Tell us about your project *"
-              required
-              value={formData.message}
-              onChange={handleChange}
-              className={inputClasses + " resize-none"}
-            />
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-medium hover:opacity-90 transition-opacity flex items-center gap-2 disabled:opacity-50"
-            >
+            <textarea name="message" rows={5} placeholder="Tell us about your brand *" required value={formData.message} onChange={handleChange} className={inputClasses + " resize-none"} />
+            <button type="submit" disabled={isSubmitting} className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-medium hover:opacity-90 transition-opacity flex items-center gap-2 disabled:opacity-50">
               {isSubmitting ? "Sending..." : "Send Message"}
               <Send size={16} />
             </button>

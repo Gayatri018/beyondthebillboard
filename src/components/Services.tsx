@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Palette, Layers, Megaphone, Film, Camera, Code } from "lucide-react";
+import { Target, Fingerprint, TrendingUp, PenTool, BookOpen, Search } from "lucide-react";
 
 const services = [
-  { icon: Palette, title: "UI/UX Design", desc: "Intuitive interfaces that delight users and drive conversions." },
-  { icon: Layers, title: "Branding", desc: "Bold identities that cut through the noise and stick." },
-  { icon: Megaphone, title: "Marketing", desc: "Strategic campaigns that amplify your voice and reach." },
-  { icon: Film, title: "Motion Design", desc: "Dynamic visuals that bring your brand story to life." },
-  { icon: Camera, title: "Photography", desc: "Striking imagery that captures your brand's essence." },
-  { icon: Code, title: "Frontend Dev", desc: "Pixel-perfect code that turns designs into reality." },
+  { icon: Target, title: "Brand Strategy", desc: "Architecting the definitive arc from functional product to emotional resonance through deep-dive consumer research." },
+  { icon: Fingerprint, title: "Brand Identity", desc: "Crafting a cohesive visual and verbal language that translates your core values into a lasting market echo." },
+  { icon: TrendingUp, title: "Digital Marketing & SEO", desc: "Data-led visibility strategies designed to move your brand beyond the noise and into the top of mind." },
+  { icon: PenTool, title: "Content Writing", desc: "Distilling the \"Why\" behind your brand into compelling copy that drives engagement and conversions." },
+  { icon: BookOpen, title: "Content Curation", desc: "Distilling the \"Why\" behind your brand into a curated digital presence that drives community and trust." },
+  { icon: Search, title: "Market Research", desc: "Decoding audience psychology to uncover the blueprints of growth before a single word is written." },
 ];
 
 const Services = () => {

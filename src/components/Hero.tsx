@@ -8,6 +8,13 @@ const stats = [
   { value: 98, suffix: "%", label: "Client Retention" },
 ];
 
+const highlights = [
+  { value: "100%", label: "Research-Led Strategies" },
+  { value: "360°", label: "Brand Narrative Coverage" },
+  { value: "24/7", label: "Digital Presence Analysis" },
+  { value: "5D", label: "Creative Perspectives" },
+];
+
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
@@ -54,7 +61,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="text-sm font-body text-accent font-medium tracking-widest uppercase mb-6"
           >
-            Creative Studio — Est. 2013
+            Beyond The Billboard — Est. 2026
           </motion.p>
 
           <motion.h1
@@ -63,9 +70,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="heading-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-8"
           >
-            We craft brands
+            We define narratives
             <br />
-            that <span className="text-accent">move</span> people.
+            that define <span className="text-accent">brand growth.</span>
           </motion.h1>
 
           <motion.p
@@ -74,8 +81,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-body text-lg md:text-xl max-w-2xl mx-auto mb-12"
           >
-            A bold creative agency specializing in branding, digital design,
-            and immersive experiences that leave a lasting impression.
+            A strategic narrative practice specializing in brand strategy, content
+            architecture, and the research-led growth of modern Indian brands.
           </motion.p>
 
           <motion.div
@@ -91,10 +98,10 @@ const Hero = () => {
               Let's Talk
             </a>
             <a
-              href="#portfolio"
+              href="#services"
               className="border border-border text-foreground px-8 py-4 rounded-lg text-base font-medium hover:bg-secondary transition-colors"
             >
-              View Work
+              Services
             </a>
           </motion.div>
 
@@ -102,7 +109,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-3xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-3xl mx-auto mb-16"
           >
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
@@ -113,10 +120,25 @@ const Hero = () => {
               </div>
             ))}
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+          >
+            {highlights.map((item) => (
+              <div key={item.label} className="text-center bg-secondary/50 rounded-xl p-4 border border-border">
+                <div className="heading-display text-2xl md:text-3xl text-accent mb-1">
+                  {item.value}
+                </div>
+                <p className="text-body text-xs">{item.label}</p>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      {/* Decorative line */}
       <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}

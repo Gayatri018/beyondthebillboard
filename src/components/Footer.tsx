@@ -1,60 +1,49 @@
-import { Instagram, Twitter, Linkedin, Dribbble } from "lucide-react";
+import { Instagram, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-16 md:py-20">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand */}
           <div>
             <h3 className="font-heading text-2xl font-bold mb-4">
               BTB<span className="text-accent">.</span>
             </h3>
             <p className="font-body text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
-              Beyond The Billboard — a bold creative agency crafting unforgettable brand experiences
-              for ambitious companies worldwide.
+              Beyond The Billboard — a strategic narrative practice specializing in brand strategy, content architecture, and the research-led growth of modern Indian brands.
             </p>
           </div>
 
-          {/* Navigation */}
           <div>
-            <h4 className="font-heading text-sm font-bold uppercase tracking-widest mb-4">
-              Navigation
-            </h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest mb-4">Navigation</h4>
             <ul className="space-y-3">
-              {["Work", "Services", "About", "Contact"].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
-                    className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-                  >
-                    {link}
+              {[
+                { label: "Brand Studies", href: "#portfolio" },
+                { label: "Services", href: "#services" },
+                { label: "About", href: "#about" },
+                { label: "Contact", href: "#contact" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                    {link.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-heading text-sm font-bold uppercase tracking-widest mb-4">
-              Contact
-            </h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest mb-4">Contact</h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/60">
               <li>hello@beyondthebillboard.com</li>
-              <li>+1 (555) 000-1234</li>
+              <li>+91 98765 43210</li>
             </ul>
           </div>
 
-          {/* Locations */}
           <div>
-            <h4 className="font-heading text-sm font-bold uppercase tracking-widest mb-4">
-              Locations
-            </h4>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest mb-4">Location</h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/60">
-              <li>New York, NY</li>
-              <li>London, UK</li>
-              <li>Berlin, DE</li>
+              <li>India</li>
             </ul>
           </div>
         </div>
@@ -64,13 +53,8 @@ const Footer = () => {
             © {new Date().getFullYear()} Beyond The Billboard. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            {[Instagram, Twitter, Linkedin, Dribbble].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="text-primary-foreground/40 hover:text-primary-foreground transition-colors"
-                aria-label="Social link"
-              >
+            {[Instagram, Twitter, Linkedin].map((Icon, i) => (
+              <a key={i} href="#" className="text-primary-foreground/40 hover:text-primary-foreground transition-colors" aria-label="Social link">
                 <Icon size={18} />
               </a>
             ))}
