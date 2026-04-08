@@ -2,18 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: 150, suffix: "+", label: "Projects Delivered" },
-  { value: 40, suffix: "+", label: "Global Brands" },
-  { value: 12, suffix: "", label: "Years Experience" },
-  { value: 98, suffix: "%", label: "Client Retention" },
+  { value: 100, suffix: "%", label: "Research-Led Strategies" },
+  { value: 360, suffix: "°", label: "Brand Narrative Coverage" },
+  { value: 24, suffix: "/7", label: "Digital Presence Analysis" },
+  { value: 5, suffix: "D", label: "Creative Perspectives" },
 ];
 
-const highlights = [
-  { value: "100%", label: "Research-Led Strategies" },
-  { value: "360°", label: "Brand Narrative Coverage" },
-  { value: "24/7", label: "Digital Presence Analysis" },
-  { value: "5D", label: "Creative Perspectives" },
-];
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
@@ -121,21 +115,6 @@ const Hero = () => {
             ))}
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
-          >
-            {highlights.map((item) => (
-              <div key={item.label} className="text-center bg-secondary/50 rounded-xl p-4 border border-border">
-                <div className="heading-display text-2xl md:text-3xl text-accent mb-1">
-                  {item.value}
-                </div>
-                <p className="text-body text-xs">{item.label}</p>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </div>
 

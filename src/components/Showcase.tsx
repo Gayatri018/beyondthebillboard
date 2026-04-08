@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import heroIllustration from "@/assets/hero-brand-illustration.jpg";
 import brandingAsset from "@/assets/branding-strategic-asset.jpg";
 
 const Showcase = () => {
@@ -23,7 +22,7 @@ const Showcase = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-10 gap-6 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -37,47 +36,28 @@ const Showcase = () => {
               loading="lazy"
               width={800}
               height={400}
-              className="w-full h-auto object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl"
             />
           </motion.div>
 
-          <div className="md:col-span-5 flex flex-col gap-6">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="rounded-xl overflow-hidden"
-            >
-              <img
-                src={heroIllustration}
-                alt="Brand building illustration"
-                loading="lazy"
-                width={800}
-                height={800}
-                className="w-full h-auto object-cover rounded-xl"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-primary text-primary-foreground rounded-xl p-8 md:p-10"
-            >
-              <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-                Bold ideas.
-                <br />
-                Bolder execution.
-              </h3>
-              <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">
-                Every brand starts with a question: How do we move beyond the noise?
-                I bridge the gap by decoding the "Why" behind the "What" to build
-                narratives that don't just demand attention, but command respect.
-              </p>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="md:col-span-3 bg-primary text-primary-foreground rounded-xl p-8 md:p-10 flex flex-col justify-center"
+          >
+            <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4">
+              Bold ideas.
+              <br />
+              Bolder execution.
+            </h3>
+            <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">
+              Every brand starts with a question: How do we move beyond the noise?
+              I bridge the gap by decoding the "Why" behind the "What" to build
+              narratives that don't just demand attention, but command respect.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
