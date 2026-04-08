@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
+import portfolioYogabar from "@/assets/portfolio-yogabar.jpg";
+import portfolioCountrydelight from "@/assets/portfolio-countrydelight.jpg";
+import portfolioPaperboat from "@/assets/portfolio-paperboat.jpg";
+import portfolioChitale from "@/assets/portfolio-chitale.jpg";
+import portfolioAmul from "@/assets/portfolio-amul.jpg";
+import portfolioMaggi from "@/assets/portfolio-maggi.jpg";
 
 const projects = [
-  { title: "Luminary Brand", category: "Branding", image: portfolio1, slug: "luminary-brand" },
-  { title: "Classé Identity", category: "Brand Identity", image: portfolio2, slug: "classe-identity" },
-  { title: "Minimal Packaging", category: "Packaging Design", image: portfolio3, slug: "minimal-packaging" },
-  { title: "App Interfaces", category: "UI/UX Design", image: portfolio4, slug: "app-interfaces" },
-  { title: "Editorial Spread", category: "Print Design", image: portfolio5, slug: "editorial-spread" },
-  { title: "Motion Reel", category: "Motion Graphics", image: portfolio6, slug: "motion-reel" },
+  { title: "Yoga Bar", category: "Clean Label Revolution", image: portfolioYogabar, slug: "yoga-bar" },
+  { title: "Country Delight", category: "Purity-First Disruption", image: portfolioCountrydelight, slug: "country-delight" },
+  { title: "Paper Boat", category: "Nostalgia Marketing", image: portfolioPaperboat, slug: "paper-boat" },
+  { title: "Chitale Bandhu", category: "Precision Heritage", image: portfolioChitale, slug: "chitale-bandhu" },
+  { title: "Amul", category: "Topical Marketing", image: portfolioAmul, slug: "amul" },
+  { title: "Maggi", category: "Crisis & Comeback", image: portfolioMaggi, slug: "maggi" },
 ];
 
 const Portfolio = () => {
@@ -29,13 +29,16 @@ const Portfolio = () => {
           className="mb-16"
         >
           <p className="text-sm font-body text-accent font-medium tracking-widest uppercase mb-4">
-            Selected Work
+            Brand Studies
           </p>
-          <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl mb-4">
             Projects that speak
             <br />
             for themselves.
           </h2>
+          <p className="text-body text-lg max-w-2xl">
+            Analyzing the strategic shifts and psychological triggers behind iconic growth.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

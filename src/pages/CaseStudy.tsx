@@ -1,12 +1,12 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
+import portfolioYogabar from "@/assets/portfolio-yogabar.jpg";
+import portfolioCountrydelight from "@/assets/portfolio-countrydelight.jpg";
+import portfolioPaperboat from "@/assets/portfolio-paperboat.jpg";
+import portfolioChitale from "@/assets/portfolio-chitale.jpg";
+import portfolioAmul from "@/assets/portfolio-amul.jpg";
+import portfolioMaggi from "@/assets/portfolio-maggi.jpg";
 
 const caseStudies: Record<string, {
   title: string;
@@ -19,71 +19,71 @@ const caseStudies: Record<string, {
   results: string[];
   visuals: string[];
 }> = {
-  "luminary-brand": {
-    title: "Luminary Brand",
-    category: "Branding",
-    image: portfolio1,
-    overview: "A complete brand identity overhaul for Luminary, a premium lifestyle brand targeting modern urban professionals seeking authenticity.",
-    problem: "Luminary's existing identity felt outdated and failed to connect with their evolving audience. They needed a brand that felt premium yet approachable.",
-    process: "We conducted extensive market research, competitor analysis, and stakeholder interviews. Through iterative workshops, we distilled the brand's core values into a visual language.",
-    solution: "A refined, minimal identity system featuring a custom wordmark, a warm earthy palette, and a flexible design system that scales across digital and print.",
-    results: ["45% increase in brand recognition", "3x social media engagement", "200% growth in direct-to-consumer sales"],
-    visuals: [portfolio1, portfolio2],
+  "yoga-bar": {
+    title: "Yoga Bar",
+    category: "Clean Label Revolution",
+    image: portfolioYogabar,
+    overview: "A strategic analysis of Yoga Bar's \"Clean Label\" revolution, a brand that bypassed traditional celebrity endorsements to build a multi-crore empire through radical transparency and community-led digital storytelling.",
+    problem: "The Indian FMCG snack market was saturated with \"healthy\" alternatives that were often loaded with synthetic additives and hidden sugars. Consumers faced a massive trust deficit, struggling to find a brand that balanced genuine nutrition with a modern, approachable identity.",
+    process: "Through the lens of narrative-led growth, I investigated Yoga Bar's journey from a bootstrapped startup to a market disruptor. The research mapped their transition from a functional product to an emotional anchor, focusing on their strategy of ingredient-first transparency and their consistent \"Clean Label\" digital campaigns.",
+    solution: "A brand architecture built on honesty. By decoding the shift in audience perception from seeing a snack to trusting a health partner, this study highlights how Yoga Bar used social media to educate rather than just sell. The result was a definitive narrative shift that turned an underdog brand into a household staple, culminating in a landmark acquisition.",
+    results: ["100 Cr+ Annual Revenue Run Rate", "Complete Acquisition by ITC Ltd.", "3x Category Growth in Muesli & Protein Bar"],
+    visuals: [portfolioYogabar, portfolioCountrydelight],
   },
-  "classe-identity": {
-    title: "Classé Identity",
-    category: "Brand Identity",
-    image: portfolio2,
-    overview: "Crafting an elevated identity for Classé, a luxury fashion house entering the North American market with a focus on timeless elegance.",
-    problem: "Classé needed a brand identity that communicated luxury without pretension, bridging European heritage with modern North American sensibilities.",
-    process: "Deep dives into luxury market positioning, typography studies, and material explorations led to a refined aesthetic rooted in restraint and quality.",
-    solution: "A monochromatic identity system with bespoke serif typography, premium packaging, and a cohesive digital presence across all touchpoints.",
-    results: ["Successful launch in 12 flagship stores", "Featured in Vogue and GQ", "92% positive brand perception score"],
-    visuals: [portfolio2, portfolio3],
+  "country-delight": {
+    title: "Country Delight",
+    category: "Purity-First Disruption",
+    image: portfolioCountrydelight,
+    overview: "A strategic analysis of Country Delight's \"Purity-First\" disruption, a brand that redefined the daily essentials category by bridging the gap between farm-fresh tradition and high-tech supply chain transparency.",
+    problem: "The Indian dairy and fresh-produce market suffered from a deeply fragmented supply chain, leading to consistent concerns over adulteration and \"middleman\" processing. For the modern urban consumer, the simple act of buying milk had become a gamble on quality rather than a standard of health.",
+    process: "Applying a narrative-driven framework, I explored how Country Delight bypassed the shelf-life obsession of traditional FMCG giants. This research examined their \"direct-to-home\" model as a psychological tool for building trust, mapping how they leveraged the \"Natural Milk\" narrative to move from a utility service to a premium daily ritual.",
+    solution: "A brand architecture rooted in accountability. By decoding how Country Delight transformed a low-engagement commodity into a high-trust digital relationship, this study highlights their use of \"test-at-home\" kits as a narrative device. The result was a radical shift in consumer behavior, proving that in a crowded market, transparency is the most potent growth engine.",
+    results: ["1,000 Cr+ Annual Revenue", "Backed by Tiger Global", "15+ Cities Urban Expansion"],
+    visuals: [portfolioCountrydelight, portfolioPaperboat],
   },
-  "minimal-packaging": {
-    title: "Minimal Packaging",
-    category: "Packaging Design",
-    image: portfolio3,
-    overview: "Sustainable, minimal packaging design for an eco-conscious skincare line committed to reducing environmental impact without compromising aesthetics.",
-    problem: "The client needed packaging that reflected their sustainability values while standing out on shelves against established luxury competitors.",
-    process: "We explored biodegradable materials, minimal ink processes, and structural designs that reduced waste by 60% compared to industry standards.",
-    solution: "Clean, tactile packaging using recycled kraft and soy-based inks, with embossed details replacing printed graphics for a premium feel.",
-    results: ["60% reduction in packaging waste", "Won Dieline Awards 2024", "30% increase in retail placement"],
-    visuals: [portfolio3, portfolio4],
+  "paper-boat": {
+    title: "Paper Boat",
+    category: "Nostalgia Marketing",
+    image: portfolioPaperboat,
+    overview: "A strategic analysis of Paper Boat's \"Nostalgia Marketing\" empire—a brand that bypassed the competitive \"juice\" category to create a new category of \"Drinks and Memories.\"",
+    problem: "The Indian beverage market was dominated by carbonated sodas and synthetic fruit drinks. While functional, these products lacked any cultural or emotional soul, leaving a void for the authentic, traditional flavors that defined Indian childhoods.",
+    process: "Using a narrative-driven lens, I explored how Paper Boat used storytelling as their primary product ingredient. The research deconstructed their \"Memories\" campaign—mapping how they used poetic copywriting and ethnic packaging to transform a simple aam-panna into a time-machine for the urban consumer.",
+    solution: "A brand architecture built on \"The Return to Innocence.\" By decoding the psychological power of nostalgia, this study highlights how Paper Boat turned a commodity into a cultural icon. The result was a brand that doesn't just sit on a shelf, but lives in the collective memory of a nation.",
+    results: ["500 Cr+ Estimated Brand Valuation", "40+ Flavors Reviving Forgotten Recipes", "One of India's Most Loved D2C Brands"],
+    visuals: [portfolioPaperboat, portfolioChitale],
   },
-  "app-interfaces": {
-    title: "App Interfaces",
-    category: "UI/UX Design",
-    image: portfolio4,
-    overview: "A complete UI/UX redesign for a fintech app serving over 2 million users, focused on simplifying complex financial workflows.",
-    problem: "Users struggled with the app's complex navigation and dense information architecture, resulting in high drop-off rates during onboarding.",
-    process: "User research, journey mapping, and rapid prototyping informed a ground-up redesign focused on progressive disclosure and intuitive navigation.",
-    solution: "A clean, card-based interface with contextual guidance, streamlined onboarding, and a personalized dashboard that surfaces relevant actions.",
-    results: ["70% reduction in onboarding drop-off", "4.8★ App Store rating", "50% increase in daily active users"],
-    visuals: [portfolio4, portfolio5],
+  "chitale-bandhu": {
+    title: "Chitale Bandhu Mithaiwale",
+    category: "Precision Heritage",
+    image: portfolioChitale,
+    overview: "A strategic analysis of Chitale Bandhu, a brand that transformed a traditional regional snack into a global FMCG staple through a rare blend of culinary heritage and industrial automation.",
+    problem: "In the mid-20th century, the traditional Indian sweets (Mithai) and savory (Namkeen) market was highly unorganized, with inconsistent quality and limited shelf life. For a growing middle class, there was a desire for authentic traditional flavors that could offer the convenience and standardized quality of international snack brands.",
+    process: "Using a narrative-led growth lens, I explored the transition of the \"Chitale Legacy\" from a local dairy in 1939 to a retail giant. The research focused on their 1970s pivot, identifying the \"Bakarwadi\" as their anchor product and analyzed how they leveraged Pune's cultural identity to build a brand narrative that balances old-world trust with new-age technology.",
+    solution: "A brand architecture built on \"Precision Heritage.\" By decoding how Chitale Bandhu moved from manual labor to being the first in India to machine-produce Bakarwadi, this study highlights their mastery of supply chain consistency. The result was a definitive shift from a neighborhood sweet shop to a global export brand, proving that tradition can scale without losing its soul.",
+    results: ["3,000 kg+ Daily Production", "200 Cr+ Estimated Annual Turnover", "Global Exports to US, Europe & SE Asia"],
+    visuals: [portfolioChitale, portfolioAmul],
   },
-  "editorial-spread": {
-    title: "Editorial Spread",
-    category: "Print Design",
-    image: portfolio5,
-    overview: "Art direction and layout design for a quarterly arts and culture publication exploring the intersection of design, technology, and human experience.",
-    problem: "The publication needed a visual refresh that honored its editorial heritage while appealing to a younger, digitally-native readership.",
-    process: "Typographic explorations, grid system development, and photo art direction created a framework that balanced tradition with contemporary energy.",
-    solution: "A bold editorial system using dramatic scale contrasts, experimental typography, and curated photography that tells stories at a glance.",
-    results: ["35% increase in newsstand sales", "Shortlisted for SPD Awards", "Expanded to 3 new international markets"],
-    visuals: [portfolio5, portfolio6],
+  "amul": {
+    title: "Amul",
+    category: "Topical Marketing",
+    image: portfolioAmul,
+    overview: "A strategic analysis of Amul's \"Topical\" marketing—a brand that turned advertising into a daily social commentary, becoming the \"Taste of India\" through sharp wit and consistent cultural relevance.",
+    problem: "In a market of sterile, product-focused dairy ads, how does a brand stay relevant to every generation for over 60 years without changing its mascot or its core message?",
+    process: "I deconstructed the \"Amul Girl\" as a narrative device. This research maps how the brand uses satire and social commentary to bridge the gap between a commodity (butter) and the collective consciousness of a nation.",
+    solution: "A brand architecture built on \"Topicality and Trust.\" By decoding the \"No-Approval\" agency model, this study highlights how Amul bypasses traditional corporate delays to stay ahead of the news cycle. The result is a brand that doesn't just sit in the fridge, it sits at the breakfast table of the Indian democracy.",
+    results: ["6,000+ Topicals — World's Longest Campaign", "80,000 Cr+ Group Turnover", "India's Most Trusted Food Brand"],
+    visuals: [portfolioAmul, portfolioMaggi],
   },
-  "motion-reel": {
-    title: "Motion Reel",
-    category: "Motion Graphics",
-    image: portfolio6,
-    overview: "A dynamic motion identity system for a tech conference, creating cohesive animated content across screens, social media, and live event visuals.",
-    problem: "The conference lacked visual cohesion across its many touchpoints, from keynote slides to social teasers to venue signage.",
-    process: "We developed a modular motion toolkit based on geometric transformations and a vibrant, evolving color system tied to the event's themes.",
-    solution: "A complete motion identity including animated logos, transition packages, lower thirds, social templates, and real-time generative visuals for the main stage.",
-    results: ["2M+ social impressions during event", "98% attendee satisfaction", "Adopted as permanent brand motion system"],
-    visuals: [portfolio6, portfolio1],
+  "maggi": {
+    title: "Maggi",
+    category: "Crisis & Comeback",
+    image: portfolioMaggi,
+    overview: "A strategic analysis of Maggi's \"Return to the Kitchen\"—a case study in crisis management and emotional branding that restored a near-total market share after a nationwide ban and a total collapse of consumer trust.",
+    problem: "In 2015, India's most iconic comfort food brand vanished overnight. Following a regulatory crisis, Maggi went from 80% market dominance to zero presence. The challenge wasn't just logistical; it was a psychological heartbreak. To survive, Nestlé had to prove the product was safe while healing a broken relationship with millions of Indian mothers and students.",
+    process: "Using a narrative-led lens, I deconstructed the \"Miss You\" and \"Nothing Like Maggi\" digital campaigns. The research focused on the shift from \"Convenience\" to \"Nostalgia\"—analyzing how the brand utilized audience-generated stories to lead its comeback. By focusing on the emotional void left by the product, the brand turned its absence into its most powerful marketing tool.",
+    solution: "A brand architecture built on \"Radical Resilience.\" By decoding the psychology of a comeback, this study highlights how Maggi successfully moved from a \"mass commodity\" to a \"cherished memory.\" The result was a masterclass in community-led growth, proving that if a brand's echo is deep enough, it can survive even the loudest silence and return to market leadership.",
+    results: ["6 Billion+ Servings in a Single Year", "60% Market Share Recovery from 0%", "Top 5 Most Trusted Food Brands in India"],
+    visuals: [portfolioMaggi, portfolioYogabar],
   },
 };
 
@@ -104,18 +104,13 @@ const CaseStudy = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Banner */}
       <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
         <img src={study.image} alt={study.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/60" />
         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Link to="/#portfolio" className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors">
-              <ArrowLeft size={16} /> Back to Work
+              <ArrowLeft size={16} /> Back to Brand Studies
             </Link>
             <p className="text-sm font-body text-accent font-medium tracking-widest uppercase mb-3">{study.category}</p>
             <h1 className="heading-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground">{study.title}</h1>
@@ -124,45 +119,12 @@ const CaseStudy = () => {
       </div>
 
       <div className="container mx-auto px-6 py-16 md:py-24 max-w-4xl">
-        {/* Overview */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <h2 className="heading-display text-2xl md:text-3xl mb-6">Overview</h2>
-          <p className="text-body text-lg leading-relaxed">{study.overview}</p>
-        </motion.section>
+        <CaseSection title="Overview" content={study.overview} />
+        <CaseSection title="The Problem" content={study.problem} />
+        <CaseSection title="The Process" content={study.process} />
+        <CaseSection title="The Solution" content={study.solution} />
 
-        {/* Problem / Process / Solution */}
-        {[
-          { title: "The Problem", content: study.problem },
-          { title: "The Process", content: study.process },
-          { title: "The Solution", content: study.solution },
-        ].map((section) => (
-          <motion.section
-            key={section.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-16"
-          >
-            <h2 className="heading-display text-2xl md:text-3xl mb-6">{section.title}</h2>
-            <p className="text-body text-lg leading-relaxed">{section.content}</p>
-          </motion.section>
-        ))}
-
-        {/* Visuals */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-16">
           <h2 className="heading-display text-2xl md:text-3xl mb-6">Visuals</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {study.visuals.map((src, i) => (
@@ -171,14 +133,7 @@ const CaseStudy = () => {
           </div>
         </motion.section>
 
-        {/* Results */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
+        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-16">
           <h2 className="heading-display text-2xl md:text-3xl mb-8">Results & Impact</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {study.results.map((result, i) => (
@@ -191,12 +146,19 @@ const CaseStudy = () => {
 
         <div className="text-center pt-8 border-t border-border">
           <Link to="/#portfolio" className="inline-flex items-center gap-2 text-accent hover:underline font-medium">
-            <ArrowLeft size={16} /> View All Projects
+            <ArrowLeft size={16} /> View All Brand Studies
           </Link>
         </div>
       </div>
     </div>
   );
 };
+
+const CaseSection = ({ title, content }: { title: string; content: string }) => (
+  <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-16">
+    <h2 className="heading-display text-2xl md:text-3xl mb-6">{title}</h2>
+    <p className="text-body text-lg leading-relaxed">{content}</p>
+  </motion.section>
+);
 
 export default CaseStudy;
