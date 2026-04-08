@@ -32,9 +32,7 @@ const Portfolio = () => {
             Brand Studies
           </p>
           <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl mb-4">
-            Projects that speak
-            <br />
-            for themselves.
+            Brand narratives.
           </h2>
           <p className="text-body text-lg max-w-2xl">
             Analyzing the strategic shifts and psychological triggers behind iconic growth.

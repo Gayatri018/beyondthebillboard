@@ -36,14 +36,14 @@ const About = () => {
           <div className="bg-background border border-border rounded-xl p-8">
             <h3 className="font-heading text-xl font-bold text-foreground mb-4">Who We Are</h3>
             <p className="text-body text-base leading-relaxed">
-              An integration of research, storytelling, and brand architecture. Led by a Master's scholar in Journalism and Mass Communication, the foundation is built on the intersection of media ethics, audience psychology, and creative prose. We don't just "write content" — we decode the "Why" behind the "What." With a background in professional content writing and a heartbeat for literature, we bring a unique hybrid approach: the precision of a journalist and the pulse of a poet.
+              An integration of research, storytelling, and brand architecture. Led by a Master's scholar in Journalism and Mass Communication, the foundation is built on the intersection of media ethics, audience psychology, and creative prose. We don't just "write content", we decode the "Why" behind the "What." With a background in professional content writing and a heartbeat for literature, we bring a unique hybrid approach: the precision of a journalist and the pulse of a poet.
             </p>
           </div>
 
           <div className="bg-background border border-border rounded-xl p-8">
             <h3 className="font-heading text-xl font-bold text-foreground mb-4">Philosophy: The Emotional ROI</h3>
             <p className="text-body text-base leading-relaxed">
-              We believe every successful brand follows a definitive arc: Function → Resonance → Loyalty. Our mission is to document this shift through Brand Studies — tracking how narrative-driven advertising directly impacts a brand's revenue and perception. By peeling back the layers of branding, we uncover the blueprints for growth, the copywriting nuances, and strategic pivots that transform a startup into a household brand.
+              We believe every successful brand follows a definitive arc: Function → Resonance → Loyalty. Our mission is to document this shift through Brand Studies, tracking how narrative-driven advertising directly impacts a brand's revenue and perception. By peeling back the layers of branding, we uncover the blueprints for growth, the copywriting nuances, and strategic pivots that transform a startup into a household brand.
             </p>
           </div>
 

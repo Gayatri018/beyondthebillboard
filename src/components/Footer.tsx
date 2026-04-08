@@ -10,7 +10,7 @@ const Footer = () => {
               BTB<span className="text-accent">.</span>
             </h3>
             <p className="font-body text-sm text-primary-foreground/60 leading-relaxed max-w-xs">
-              Beyond The Billboard — a strategic narrative practice specializing in brand strategy, content architecture, and the research-led growth of modern Indian brands.
+              Beyond The Billboard, a strategic narrative practice specializing in brand strategy, content architecture, and the research-led growth of modern Indian brands.
             </p>
           </div>
 
