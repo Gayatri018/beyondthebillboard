@@ -1,26 +1,37 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import portfolioYogabar from "@/assets/portfolio-yogabar.jpg";
-import portfolioCountrydelight from "@/assets/portfolio-countrydelight.jpg";
-import portfolioPaperboat from "@/assets/portfolio-paperboat.jpg";
-import portfolioChitale from "@/assets/portfolio-chitale.jpg";
-import portfolioAmul from "@/assets/portfolio-amul.jpg";
-import portfolioMaggi from "@/assets/portfolio-maggi.jpg";
+import logoYogabar from "@/assets/logo-yogabar.jpeg";
+import logoCountrydelight from "@/assets/logo-countrydelight.png";
+import logoPaperboat from "@/assets/logo-paperboat.jpeg";
+import heroIllustration from "@/assets/hero-brand-illustration.jpg";
 
 const projects = [
-  { title: "Yoga Bar", category: "Clean Label Revolution", image: portfolioYogabar, slug: "yoga-bar" },
-  { title: "Country Delight", category: "Purity-First Disruption", image: portfolioCountrydelight, slug: "country-delight" },
-  { title: "Paper Boat", category: "Nostalgia Marketing", image: portfolioPaperboat, slug: "paper-boat" },
-  { title: "Chitale Bandhu", category: "Precision Heritage", image: portfolioChitale, slug: "chitale-bandhu" },
-  { title: "Amul", category: "Topical Marketing", image: portfolioAmul, slug: "amul" },
-  { title: "Maggi", category: "Crisis & Comeback", image: portfolioMaggi, slug: "maggi" },
+  { title: "Yoga Bar", category: "Clean Label Revolution", image: logoYogabar, slug: "yoga-bar" },
+  { title: "Country Delight", category: "Purity-First Disruption", image: logoCountrydelight, slug: "country-delight" },
+  { title: "Paper Boat", category: "Nostalgia Marketing", image: logoPaperboat, slug: "paper-boat" },
 ];
 
 const Portfolio = () => {
   return (
     <section id="portfolio" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
+        {/* BRAND hero image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 rounded-xl overflow-hidden max-h-[300px]"
+        >
+          <img
+            src={heroIllustration}
+            alt="Brand Studies"
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,14 +63,12 @@ const Portfolio = () => {
                 to={`/case-study/${project.slug}`}
                 className="group relative rounded-xl overflow-hidden cursor-pointer bg-card block"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[4/3] overflow-hidden bg-white flex items-center justify-center p-8">
                   <img
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/60 transition-colors duration-300 flex items-end">
@@ -78,6 +87,28 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* View More Brands */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 text-center"
+        >
+          <Link
+            to="/brand-studies"
+            className="group inline-flex items-center gap-3 text-lg font-heading font-bold text-foreground hover:text-accent transition-colors"
+          >
+            View more brands
+            <motion.span
+              animate={{ x: [0, 6, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ArrowRight size={22} className="group-hover:text-accent transition-colors" />
+            </motion.span>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
