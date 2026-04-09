@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -33,26 +35,26 @@ const About = () => {
             Most people see an advertisement as a 30-second interruption or a static image on a highway. We see it as a narrative shift. Beyond The Billboard was born from a simple observation: In an era of infinite scrolling, the brands that win aren't the ones with the loudest voices, but the ones with the deepest echoes.
           </p>
 
-          <div className="bg-background border border-border rounded-xl p-8">
-            <h3 className="font-heading text-xl font-bold text-foreground mb-4">Who We Are</h3>
-            <p className="text-body text-base leading-relaxed">
-              An integration of research, storytelling, and brand architecture. Led by a Master's scholar in Journalism and Mass Communication, the foundation is built on the intersection of media ethics, audience psychology, and creative prose. We don't just "write content", we decode the "Why" behind the "What." With a background in professional content writing and a heartbeat for literature, we bring a unique hybrid approach: the precision of a journalist and the pulse of a poet.
-            </p>
-          </div>
-
-          <div className="bg-background border border-border rounded-xl p-8">
-            <h3 className="font-heading text-xl font-bold text-foreground mb-4">Philosophy: The Emotional ROI</h3>
-            <p className="text-body text-base leading-relaxed">
-              We believe every successful brand follows a definitive arc: Function → Resonance → Loyalty. Our mission is to document this shift through Brand Studies, tracking how narrative-driven advertising directly impacts a brand's revenue and perception. By peeling back the layers of branding, we uncover the blueprints for growth, the copywriting nuances, and strategic pivots that transform a startup into a household brand.
-            </p>
-          </div>
-
-          <div className="bg-background border border-border rounded-xl p-8">
-            <h3 className="font-heading text-xl font-bold text-foreground mb-4">Why "BTB"?</h3>
-            <p className="text-body text-base leading-relaxed">
-              Because Beyond The Billboard is just the beginning. The real magic happens in the conversation that follows. It happens when a brand stops being a product and starts being a part of a consumer's identity. Join us as we explore the architects, the voices, and the vibrant stories that define the brand landscape.
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Link
+              to="/about"
+              className="group inline-flex items-center gap-3 text-lg font-heading font-semibold text-foreground hover:text-accent transition-colors duration-300"
+            >
+              Read about us
+              <motion.span
+                className="inline-block"
+                animate={{ x: [0, 6, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <ArrowRight size={22} />
+              </motion.span>
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>

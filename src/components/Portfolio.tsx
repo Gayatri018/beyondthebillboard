@@ -18,7 +18,7 @@ export const projects = [
 ];
 
 const Portfolio = () => {
-  const featured = projects.slice(0, 3);
+  const featured = projects.slice(3, 6);
 
   return (
     <section id="portfolio" className="py-24 md:py-32">
