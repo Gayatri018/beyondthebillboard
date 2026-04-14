@@ -32,7 +32,7 @@ const BlogList = () => {
             className="mb-16"
           >
             <p className="text-sm font-body text-accent font-medium tracking-widest uppercase mb-4">
-              All Insights
+              All Blogs
             </p>
             <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl">
               From the desk of BTB
@@ -40,7 +40,7 @@ const BlogList = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((blog, i) => (
+            {[...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((blog, i) => (
               <motion.div
                 key={blog.slug}
                 initial={{ opacity: 0, y: 30 }}

@@ -55,7 +55,8 @@ export const blogPosts: BlogPost[] = [
 ];
 
 const BlogSection = () => {
-  const displayedBlogs = blogPosts.slice(0, 3);
+  const sortedBlogs = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const displayedBlogs = sortedBlogs.slice(0, 3);
 
   return (
     <section id="blog" className="py-24 md:py-32">
@@ -68,7 +69,7 @@ const BlogSection = () => {
           className="mb-16"
         >
           <p className="text-sm font-body text-accent font-medium tracking-widest uppercase mb-4">
-            Insights
+            Blogs
           </p>
           <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl">
             From the desk of BTB

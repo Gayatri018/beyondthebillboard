@@ -1,12 +1,24 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import portfolioYogabar from "@/assets/portfolio-yogabar.jpg";
-import portfolioCountrydelight from "@/assets/portfolio-countrydelight.jpg";
-import portfolioPaperboat from "@/assets/portfolio-paperboat.jpg";
-import portfolioChitale from "@/assets/portfolio-chitale.jpg";
-import portfolioAmul from "@/assets/portfolio-amul.jpg";
-import portfolioMaggi from "@/assets/portfolio-maggi.jpg";
+import logoYogabar from "@/assets/logo-yogabar.jpeg";
+import logoCountrydelight from "@/assets/logo-countrydelight.png";
+import logoPaperboat from "@/assets/logo-paperboat.jpeg";
+import logoChitale from "@/assets/logo-chitale.png";
+import logoAmul from "@/assets/logo-amul.jpeg";
+import logoMaggi from "@/assets/logo-maggi.png";
+import csYogabar1 from "@/assets/cs-yogabar-1.png";
+import csYogabar2 from "@/assets/cs-yogabar-2.png";
+import csPaperboat1 from "@/assets/cs-paperboat-1.png";
+import csPaperboat2 from "@/assets/cs-paperboat-2.png";
+import csChitale1 from "@/assets/cs-chitale-1.png";
+import csChitale2 from "@/assets/cs-chitale-2.png";
+import csAmul1 from "@/assets/cs-amul-1.png";
+import csAmul2 from "@/assets/cs-amul-2.png";
+import csMaggi1 from "@/assets/cs-maggi-1.png";
+import csMaggi2 from "@/assets/cs-maggi-2.png";
+// Country Delight doesn't have dedicated case study images, reusing logo-based ones
+import portfolioCountrydelight from "@/assets/logo-countrydelight.png";
 
 const caseStudies: Record<string, {
   title: string;
@@ -22,68 +34,68 @@ const caseStudies: Record<string, {
   "yoga-bar": {
     title: "Yoga Bar",
     category: "Clean Label Revolution",
-    image: portfolioYogabar,
+    image: logoYogabar,
     overview: "A strategic analysis of Yoga Bar's \"Clean Label\" revolution, a brand that bypassed traditional celebrity endorsements to build a multi-crore empire through radical transparency and community-led digital storytelling.",
     problem: "The Indian FMCG snack market was saturated with \"healthy\" alternatives that were often loaded with synthetic additives and hidden sugars. Consumers faced a massive trust deficit, struggling to find a brand that balanced genuine nutrition with a modern, approachable identity.",
     process: "Through the lens of narrative-led growth, I investigated Yoga Bar's journey from a bootstrapped startup to a market disruptor. The research mapped their transition from a functional product to an emotional anchor, focusing on their strategy of ingredient-first transparency and their consistent \"Clean Label\" digital campaigns.",
     solution: "A brand architecture built on honesty. By decoding the shift in audience perception from seeing a snack to trusting a health partner, this study highlights how Yoga Bar used social media to educate rather than just sell. The result was a definitive narrative shift that turned an underdog brand into a household staple, culminating in a landmark acquisition.",
     results: ["100 Cr+ Annual Revenue Run Rate", "Complete Acquisition by ITC Ltd.", "3x Category Growth in Muesli & Protein Bar"],
-    visuals: [portfolioYogabar, portfolioCountrydelight],
+    visuals: [csYogabar1, csYogabar2],
   },
   "country-delight": {
     title: "Country Delight",
     category: "Purity-First Disruption",
-    image: portfolioCountrydelight,
+    image: logoCountrydelight,
     overview: "A strategic analysis of Country Delight's \"Purity-First\" disruption, a brand that redefined the daily essentials category by bridging the gap between farm-fresh tradition and high-tech supply chain transparency.",
     problem: "The Indian dairy and fresh-produce market suffered from a deeply fragmented supply chain, leading to consistent concerns over adulteration and \"middleman\" processing. For the modern urban consumer, the simple act of buying milk had become a gamble on quality rather than a standard of health.",
     process: "Applying a narrative-driven framework, I explored how Country Delight bypassed the shelf-life obsession of traditional FMCG giants. This research examined their \"direct-to-home\" model as a psychological tool for building trust, mapping how they leveraged the \"Natural Milk\" narrative to move from a utility service to a premium daily ritual.",
     solution: "A brand architecture rooted in accountability. By decoding how Country Delight transformed a low-engagement commodity into a high-trust digital relationship, this study highlights their use of \"test-at-home\" kits as a narrative device. The result was a radical shift in consumer behavior, proving that in a crowded market, transparency is the most potent growth engine.",
     results: ["1,000 Cr+ Annual Revenue", "Backed by Tiger Global", "15+ Cities Urban Expansion"],
-    visuals: [portfolioCountrydelight, portfolioPaperboat],
+    visuals: [portfolioCountrydelight, portfolioCountrydelight],
   },
   "paper-boat": {
     title: "Paper Boat",
     category: "Nostalgia Marketing",
-    image: portfolioPaperboat,
+    image: logoPaperboat,
     overview: "A strategic analysis of Paper Boat's \"Nostalgia Marketing\" empire, a brand that bypassed the competitive \"juice\" category to create a new category of \"Drinks and Memories.\"",
     problem: "The Indian beverage market was dominated by carbonated sodas and synthetic fruit drinks. While functional, these products lacked any cultural or emotional soul, leaving a void for the authentic, traditional flavors that defined Indian childhoods.",
     process: "Using a narrative-driven lens, I explored how Paper Boat used storytelling as their primary product ingredient. The research deconstructed their \"Memories\" campaign, mapping how they used poetic copywriting and ethnic packaging to transform a simple aam-panna into a time-machine for the urban consumer.",
     solution: "A brand architecture built on \"The Return to Innocence.\" By decoding the psychological power of nostalgia, this study highlights how Paper Boat turned a commodity into a cultural icon. The result was a brand that doesn't just sit on a shelf, but lives in the collective memory of a nation.",
     results: ["500 Cr+ Estimated Brand Valuation", "40+ Flavors Reviving Forgotten Recipes", "One of India's Most Loved D2C Brands"],
-    visuals: [portfolioPaperboat, portfolioChitale],
+    visuals: [csPaperboat1, csPaperboat2],
   },
   "chitale-bandhu": {
     title: "Chitale Bandhu Mithaiwale",
     category: "Precision Heritage",
-    image: portfolioChitale,
+    image: logoChitale,
     overview: "A strategic analysis of Chitale Bandhu, a brand that transformed a traditional regional snack into a global FMCG staple through a rare blend of culinary heritage and industrial automation.",
     problem: "In the mid-20th century, the traditional Indian sweets (Mithai) and savory (Namkeen) market was highly unorganized, with inconsistent quality and limited shelf life. For a growing middle class, there was a desire for authentic traditional flavors that could offer the convenience and standardized quality of international snack brands.",
     process: "Using a narrative-led growth lens, I explored the transition of the \"Chitale Legacy\" from a local dairy in 1939 to a retail giant. The research focused on their 1970s pivot, identifying the \"Bakarwadi\" as their anchor product and analyzed how they leveraged Pune's cultural identity to build a brand narrative that balances old-world trust with new-age technology.",
     solution: "A brand architecture built on \"Precision Heritage.\" By decoding how Chitale Bandhu moved from manual labor to being the first in India to machine-produce Bakarwadi, this study highlights their mastery of supply chain consistency. The result was a definitive shift from a neighborhood sweet shop to a global export brand, proving that tradition can scale without losing its soul.",
     results: ["3,000 kg+ Daily Production", "200 Cr+ Estimated Annual Turnover", "Global Exports to US, Europe & SE Asia"],
-    visuals: [portfolioChitale, portfolioAmul],
+    visuals: [csChitale1, csChitale2],
   },
   "amul": {
     title: "Amul",
     category: "Topical Marketing",
-    image: portfolioAmul,
+    image: logoAmul,
     overview: "A strategic analysis of Amul's \"Topical\" marketing, a brand that turned advertising into a daily social commentary, becoming the \"Taste of India\" through sharp wit and consistent cultural relevance.",
     problem: "In a market of sterile, product-focused dairy ads, how does a brand stay relevant to every generation for over 60 years without changing its mascot or its core message?",
     process: "I deconstructed the \"Amul Girl\" as a narrative device. This research maps how the brand uses satire and social commentary to bridge the gap between a commodity (butter) and the collective consciousness of a nation.",
     solution: "A brand architecture built on \"Topicality and Trust.\" By decoding the \"No-Approval\" agency model, this study highlights how Amul bypasses traditional corporate delays to stay ahead of the news cycle. The result is a brand that doesn't just sit in the fridge, it sits at the breakfast table of the Indian democracy.",
     results: ["6,000+ Topicals, World's Longest Campaign", "80,000 Cr+ Group Turnover", "India's Most Trusted Food Brand"],
-    visuals: [portfolioAmul, portfolioMaggi],
+    visuals: [csAmul1, csAmul2],
   },
   "maggi": {
     title: "Maggi",
     category: "Crisis & Comeback",
-    image: portfolioMaggi,
+    image: logoMaggi,
     overview: "A strategic analysis of Maggi's \"Return to the Kitchen\", a case study in crisis management and emotional branding that restored a near-total market share after a nationwide ban and a total collapse of consumer trust.",
     problem: "In 2015, India's most iconic comfort food brand vanished overnight. Following a regulatory crisis, Maggi went from 80% market dominance to zero presence. The challenge wasn't just logistical; it was a psychological heartbreak. To survive, Nestlé had to prove the product was safe while healing a broken relationship with millions of Indian mothers and students.",
     process: "Using a narrative-led lens, I deconstructed the \"Miss You\" and \"Nothing Like Maggi\" digital campaigns. The research focused on the shift from \"Convenience\" to \"Nostalgia\", analyzing how the brand utilized audience-generated stories to lead its comeback. By focusing on the emotional void left by the product, the brand turned its absence into its most powerful marketing tool.",
     solution: "A brand architecture built on \"Radical Resilience.\" By decoding the psychology of a comeback, this study highlights how Maggi successfully moved from a \"mass commodity\" to a \"cherished memory.\" The result was a masterclass in community-led growth, proving that if a brand's echo is deep enough, it can survive even the loudest silence and return to market leadership.",
     results: ["6 Billion+ Servings in a Single Year", "60% Market Share Recovery from 0%", "Top 5 Most Trusted Food Brands in India"],
-    visuals: [portfolioMaggi, portfolioYogabar],
+    visuals: [csMaggi1, csMaggi2],
   },
 };
 
@@ -105,7 +117,7 @@ const CaseStudy = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-        <img src={study.image} alt={study.title} className="w-full h-full object-cover" />
+        <img src={study.image} alt={study.title} className="w-full h-full object-contain bg-white" />
         <div className="absolute inset-0 bg-foreground/60" />
         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-16">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -128,7 +140,7 @@ const CaseStudy = () => {
           <h2 className="heading-display text-2xl md:text-3xl mb-6">Visuals</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {study.visuals.map((src, i) => (
-              <img key={i} src={src} alt={`${study.title} visual ${i + 1}`} className="rounded-xl w-full object-cover aspect-[4/3]" loading="lazy" />
+              <img key={i} src={src} alt={`${study.title} visual ${i + 1}`} className="rounded-xl w-full object-contain aspect-[4/3] bg-muted" loading="lazy" />
             ))}
           </div>
         </motion.section>
