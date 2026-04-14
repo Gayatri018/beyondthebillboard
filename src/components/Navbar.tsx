@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "Work", href: "#portfolio" },
+  { label: "Home", href: "/" },
+  { label: "Brand Studies", href: "#portfolio" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -17,6 +19,8 @@ const Navbar = () => {
     }
     return false;
   });
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (isDark) {
@@ -26,10 +30,33 @@ const Navbar = () => {
     }
   }, [isDark]);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === "/") {
+      e.preventDefault();
+      if (location.pathname !== "/") {
+        navigate("/");
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      setIsOpen(false);
+      return;
+    }
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      if (location.pathname !== "/") {
+        navigate("/" + href);
+      } else {
+        const el = document.querySelector(href);
+        el?.scrollIntoView({ behavior: "smooth" });
+      }
+      setIsOpen(false);
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="/" className="font-heading text-xl font-bold text-foreground tracking-tight">
+        <a href="/" onClick={(e) => handleNavClick(e, "/")} className="font-heading text-xl font-bold text-foreground tracking-tight">
           BTB<span className="text-accent">.</span>
         </a>
 
@@ -38,6 +65,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               {link.label}
@@ -52,6 +80,7 @@ const Navbar = () => {
           </button>
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Let's Talk
@@ -89,7 +118,7 @@ const Navbar = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="text-lg font-heading text-foreground"
                 >
                   {link.label}
@@ -97,7 +126,7 @@ const Navbar = () => {
               ))}
               <a
                 href="#contact"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, "#contact")}
                 className="bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center"
               >
                 Let's Talk

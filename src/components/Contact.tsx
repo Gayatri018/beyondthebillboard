@@ -12,20 +12,12 @@ const serviceOptions = [
   "Market Research",
 ];
 
-const budgetOptions = [
-  "Under ₹50K",
-  "₹50K – ₹2L",
-  "₹2L – ₹5L",
-  "₹5L+",
-];
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     service: "",
-    budget: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -102,11 +94,11 @@ const Contact = () => {
             <div className="space-y-4">
               <p className="text-sm font-body text-muted-foreground">
                 <span className="text-foreground font-medium">Email:</span>{" "}
-                hello@beyondthebillboard.com
+                help.beyondthebillboard@gmail.com
               </p>
               <p className="text-sm font-body text-muted-foreground">
                 <span className="text-foreground font-medium">Phone:</span>{" "}
-                +91 98765 43210
+                +91 9149548542
               </p>
             </div>
           </motion.div>
@@ -124,16 +116,10 @@ const Contact = () => {
               <input name="email" type="email" placeholder="Email Address *" required value={formData.email} onChange={handleChange} className={inputClasses} />
             </div>
             <input name="phone" type="tel" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className={inputClasses} />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <select name="service" required value={formData.service} onChange={handleChange} className={inputClasses}>
-                <option value="" disabled>Select Service *</option>
-                {serviceOptions.map((s) => (<option key={s} value={s}>{s}</option>))}
-              </select>
-              <select name="budget" required value={formData.budget} onChange={handleChange} className={inputClasses}>
-                <option value="" disabled>Budget Range *</option>
-                {budgetOptions.map((b) => (<option key={b} value={b}>{b}</option>))}
-              </select>
-            </div>
+            <select name="service" required value={formData.service} onChange={handleChange} className={inputClasses}>
+              <option value="" disabled>Select Service *</option>
+              {serviceOptions.map((s) => (<option key={s} value={s}>{s}</option>))}
+            </select>
             <textarea name="message" rows={5} placeholder="Tell us about your brand *" required value={formData.message} onChange={handleChange} className={inputClasses + " resize-none"} />
             <button type="submit" disabled={isSubmitting} className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-medium hover:opacity-90 transition-opacity flex items-center gap-2 disabled:opacity-50">
               {isSubmitting ? "Sending..." : "Send Message"}
