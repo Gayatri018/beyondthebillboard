@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const serviceOptions = [
   "Brand Strategy",
@@ -29,15 +30,43 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   try {
+  //     await new Promise((resolve) => setTimeout(resolve, 1500));
+  //     setIsSubmitted(true);
+  //     toast.success("Message sent! We'll be in touch soon.");
+  //   } catch {
+  //     toast.error("Something went wrong. Please try again.");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await emailjs.send(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          user_phone: formData.phone,
+          user_service: formData.service,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
+      );
+
       setIsSubmitted(true);
       toast.success("Message sent! We'll be in touch soon.");
-    } catch {
+    } catch (error) {
+      console.error(error);
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);

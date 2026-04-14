@@ -17,6 +17,8 @@ import csAmul1 from "@/assets/cs-amul-1.png";
 import csAmul2 from "@/assets/cs-amul-2.png";
 import csMaggi1 from "@/assets/cs-maggi-1.png";
 import csMaggi2 from "@/assets/cs-maggi-2.png";
+import countryDelight1 from "@/assets/cs-countrydelight-1.png";
+import countryDelight2 from "@/assets/cs-countrydelight-2.png";
 // Country Delight doesn't have dedicated case study images, reusing logo-based ones
 import portfolioCountrydelight from "@/assets/logo-countrydelight.png";
 
@@ -51,7 +53,7 @@ const caseStudies: Record<string, {
     process: "Applying a narrative-driven framework, I explored how Country Delight bypassed the shelf-life obsession of traditional FMCG giants. This research examined their \"direct-to-home\" model as a psychological tool for building trust, mapping how they leveraged the \"Natural Milk\" narrative to move from a utility service to a premium daily ritual.",
     solution: "A brand architecture rooted in accountability. By decoding how Country Delight transformed a low-engagement commodity into a high-trust digital relationship, this study highlights their use of \"test-at-home\" kits as a narrative device. The result was a radical shift in consumer behavior, proving that in a crowded market, transparency is the most potent growth engine.",
     results: ["1,000 Cr+ Annual Revenue", "Backed by Tiger Global", "15+ Cities Urban Expansion"],
-    visuals: [portfolioCountrydelight, portfolioCountrydelight],
+    visuals: [countryDelight1, countryDelight2],
   },
   "paper-boat": {
     title: "Paper Boat",

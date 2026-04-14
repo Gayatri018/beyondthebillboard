@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import founderImg from "@/assets/founder.png";
+import founderImg from "@/assets/founder.jpeg";
 
 const Founder = () => {
   return (
@@ -28,11 +28,11 @@ const Founder = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+            <div className="rounded-2xl overflow-hidden">
               <img
                 src={founderImg}
                 alt="Bipasha Dey, Founder of Beyond The Billboard"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-scale-down"
               />
             </div>
           </motion.div>
