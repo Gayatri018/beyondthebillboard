@@ -22,6 +22,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Handle Dark Mode toggle
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
@@ -30,40 +31,46 @@ const Navbar = () => {
     }
   }, [isDark]);
 
+  // Ensure menu closes if the route changes unexpectedly
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault(); // Stop default browser jumping
+    setIsOpen(false); // Immediately close the menu on click
+
     if (href === "/") {
-      e.preventDefault();
       if (location.pathname !== "/") {
         navigate("/");
       } else {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
-      setIsOpen(false);
       return;
     }
+    
     if (href.startsWith("#")) {
-      // e.preventDefault();
       if (location.pathname !== "/") {
         navigate("/" + href);
       } else {
         const el = document.querySelector(href);
-        // el?.scrollIntoView({ behavior: "smooth" });
         if (el) {
           const y = el.getBoundingClientRect().top + window.pageYOffset - 80; // Adjust for navbar height
           window.scrollTo({ top: y, behavior: "smooth" });
         }
       }
-      setIsOpen(false);
     }
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-[100] bg-background/90 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="/" onClick={(e) => handleNavClick(e, "/")} className="font-heading text-xl font-bold text-foreground tracking-tight">
+        {/* Logo */}
+        <a href="/" onClick={(e) => handleNavClick(e, "/")} className="font-heading text-xl font-bold text-foreground tracking-tight relative z-50">
           BTB<span className="text-accent">.</span>
         </a>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -91,17 +98,18 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="flex items-center gap-3 md:hidden">
+        {/* Mobile Toggle Buttons */}
+        <div className="flex items-center gap-2 md:hidden relative z-50">
           <button
             onClick={() => setIsDark(!isDark)}
-            className="p-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
+            className="p-2 rounded-lg text-muted-foreground hover:text-foreground active:bg-muted transition-colors"
             aria-label="Toggle dark mode"
           >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-foreground"
+            className="p-2 text-foreground rounded-lg active:bg-muted transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -109,21 +117,24 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            // Absolute positioning fixes Android stacking & backdrop-blur glitches
+            className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-border shadow-xl"
           >
-            <div className="flex flex-col gap-4 px-6 py-6">
+            <div className="flex flex-col gap-2 px-6 py-6">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-lg font-heading text-foreground"
+                  className="text-lg font-heading text-foreground py-3 border-b border-border/40 active:text-primary transition-colors"
                 >
                   {link.label}
                 </a>
@@ -131,7 +142,7 @@ const Navbar = () => {
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, "#contact")}
-                className="bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center"
+                className="bg-primary text-primary-foreground px-5 py-4 mt-4 rounded-lg text-base font-medium text-center active:scale-95 transition-transform"
               >
                 Let's Talk
               </a>
