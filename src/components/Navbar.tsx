@@ -47,7 +47,11 @@ const Navbar = () => {
         navigate("/" + href);
       } else {
         const el = document.querySelector(href);
-        el?.scrollIntoView({ behavior: "smooth" });
+        // el?.scrollIntoView({ behavior: "smooth" });
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.pageYOffset - 80; // Adjust for navbar height
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
       }
       setIsOpen(false);
     }
