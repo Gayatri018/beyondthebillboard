@@ -42,7 +42,7 @@ const Navbar = () => {
       return;
     }
     if (href.startsWith("#")) {
-      e.preventDefault();
+      // e.preventDefault();
       if (location.pathname !== "/") {
         navigate("/" + href);
       } else {
